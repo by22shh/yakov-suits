@@ -13,13 +13,33 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-50">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-primary/5 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-        <div className="absolute top-40 right-20 w-72 h-72 bg-accent/5 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-        <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-primary/5 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
-      </div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Видео фон */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover z-0"
+        onError={() => setVideoError(true)}
+      >
+        <source src="https://ext.same-assets.com/3940600651/887038168.webm" type="video/webm" />
+        {/* Fallback для браузеров не поддерживающих webm */}
+      </video>
+
+      {/* Затемнение поверх видео для лучшей читаемости */}
+      <div className="absolute inset-0 bg-black/40 z-10"></div>
+
+      {/* Fallback фон если видео не загрузилось */}
+      {videoError && (
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-50 via-white to-gray-50 z-5">
+          <div className="absolute inset-0 opacity-30">
+            <div className="absolute top-20 left-20 w-72 h-72 bg-primary/5 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
+            <div className="absolute top-40 right-20 w-72 h-72 bg-accent/5 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
+            <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-primary/5 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+          </div>
+        </div>
+      )}
 
       <div className="container-custom relative z-20 pt-24 sm:pt-32 pb-48 sm:pb-56 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto text-center space-y-8 sm:space-y-12">
@@ -29,7 +49,7 @@ export function Hero() {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >
-            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent drop-shadow-lg">
               Перестаньте покупать AI.<br />
               Начните на нем зарабатывать
             </span>
@@ -37,7 +57,7 @@ export function Hero() {
 
           {/* Subheading */}
           <p
-            className={`text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto transition-all duration-1000 delay-200 ${
+            className={`text-lg sm:text-xl md:text-2xl text-gray-200 leading-relaxed max-w-4xl mx-auto transition-all duration-1000 delay-200 drop-shadow-md ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >
@@ -115,9 +135,9 @@ export function Hero() {
         </div>
         
         {/* Логотипы компаний в нижней части Hero */}
-        <div className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none">
-          {/* Градиентный переход */}
-          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-gray-50/90 to-transparent pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 right-0 z-30 pointer-events-none">
+          {/* Градиентный переход - теперь от темного к прозрачному для лучшего сочетания с видео */}
+          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black/20 to-transparent pointer-events-none"></div>
           <LogosMarquee />
         </div>
       </div>
