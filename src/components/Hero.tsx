@@ -135,9 +135,8 @@ export function Hero() {
         </div>
         
         {/* Логотипы компаний в нижней части Hero */}
-        <div className="absolute bottom-0 left-0 right-0 z-30 pointer-events-none">
-          {/* Градиентный переход - от белого к прозрачному для плавного перехода */}
-          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white/80 to-transparent pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 right-0 z-30 pointer-events-none backdrop-blur-sm">
+          {/* Логотипы на прозрачном фоне с легким размытием для лучшей читаемости */}
           <LogosMarquee />
         </div>
       </div>

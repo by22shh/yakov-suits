@@ -31,7 +31,7 @@ export function LogosMarquee() {
                 alt={logo.alt}
                 width={240}
                 height={logo.height}
-                className="object-contain w-auto transition-all duration-300 hidden sm:block"
+                className="object-contain w-auto transition-all duration-300 hidden sm:block drop-shadow-sm"
                 style={{ height: `${logo.height}px` }}
               />
               <Image
@@ -39,7 +39,7 @@ export function LogosMarquee() {
                 alt={logo.alt}
                 width={160}
                 height={logo.mobileHeight}
-                className="object-contain w-auto transition-all duration-300 block sm:hidden"
+                className="object-contain w-auto transition-all duration-300 block sm:hidden drop-shadow-sm"
                 style={{ height: `${logo.mobileHeight}px` }}
               />
             </div>
@@ -56,7 +56,7 @@ export function LogosMarquee() {
                 alt={logo.alt}
                 width={240}
                 height={logo.height}
-                className="object-contain w-auto transition-all duration-300 hidden sm:block"
+                className="object-contain w-auto transition-all duration-300 hidden sm:block drop-shadow-sm"
                 style={{ height: `${logo.height}px` }}
               />
               <Image
@@ -64,7 +64,7 @@ export function LogosMarquee() {
                 alt={logo.alt}
                 width={160}
                 height={logo.mobileHeight}
-                className="object-contain w-auto transition-all duration-300 block sm:hidden"
+                className="object-contain w-auto transition-all duration-300 block sm:hidden drop-shadow-sm"
                 style={{ height: `${logo.mobileHeight}px` }}
               />
             </div>
@@ -81,7 +81,7 @@ export function LogosMarquee() {
                 alt={logo.alt}
                 width={240}
                 height={logo.height}
-                className="object-contain w-auto transition-all duration-300 hidden sm:block"
+                className="object-contain w-auto transition-all duration-300 hidden sm:block drop-shadow-sm"
                 style={{ height: `${logo.height}px` }}
               />
               <Image
@@ -89,7 +89,7 @@ export function LogosMarquee() {
                 alt={logo.alt}
                 width={160}
                 height={logo.mobileHeight}
-                className="object-contain w-auto transition-all duration-300 block sm:hidden"
+                className="object-contain w-auto transition-all duration-300 block sm:hidden drop-shadow-sm"
                 style={{ height: `${logo.mobileHeight}px` }}
               />
             </div>
