@@ -21,7 +21,7 @@ export function Hero() {
         <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-primary/5 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
       </div>
 
-      <div className="container-custom relative z-10 pt-24 sm:pt-32 pb-32 sm:pb-40 px-4 sm:px-6">
+      <div className="container-custom relative z-20 pt-24 sm:pt-32 pb-48 sm:pb-56 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto text-center space-y-8 sm:space-y-12">
           {/* Main heading */}
           <h1
@@ -117,7 +117,7 @@ export function Hero() {
         {/* Логотипы компаний в нижней части Hero */}
         <div className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none">
           {/* Градиентный переход */}
-          <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-gray-50/80 to-transparent pointer-events-none"></div>
+          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-gray-50/90 to-transparent pointer-events-none"></div>
           <LogosMarquee />
         </div>
       </div>
