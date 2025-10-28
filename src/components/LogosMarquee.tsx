@@ -16,7 +16,7 @@ export function LogosMarquee() {
   ];
 
   return (
-    <section className="relative py-12 sm:py-16 overflow-hidden">
+    <section className="relative py-12 sm:py-16 overflow-hidden pointer-events-none">
       <div className="relative flex">
         <div className="flex animate-marquee">
           {/* Первый набор логотипов */}

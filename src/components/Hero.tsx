@@ -90,28 +90,32 @@ export function Hero() {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >
-            <Button
-              asChild
-              size="lg"
-              className="text-base sm:text-lg px-8 sm:px-10 py-6 sm:py-7 w-full sm:w-auto shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 bg-gradient-to-r from-primary to-primary/90"
+            {/* Временная версия для отладки - прямые ссылки */}
+            <a 
+              href="#cta" 
+              className="inline-flex items-center justify-center gap-2 text-base sm:text-lg px-8 sm:px-10 py-6 sm:py-7 w-full sm:w-auto shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 bg-gradient-to-r from-primary to-primary/90 text-white rounded-xl font-semibold cursor-pointer"
+              onClick={(e) => {
+                console.log('Клик по кнопке CTA');
+                // Не предотвращаем действие по умолчанию - пусть ссылка работает
+              }}
             >
-              <a href="#cta" className="flex items-center justify-center gap-2">
-                Получить бесплатный AI-аудит
-              </a>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="text-base sm:text-lg px-8 sm:px-10 py-6 sm:py-7 w-full sm:w-auto bg-white border-2 border-gray-200 hover:bg-gray-50 transition-all duration-300 hover:-translate-y-0.5"
+              Получить бесплатный AI-аудит
+            </a>
+            <a 
+              href="#keisy"
+              className="inline-flex items-center justify-center gap-2 text-base sm:text-lg px-8 sm:px-10 py-6 sm:py-7 w-full sm:w-auto bg-white border-2 border-gray-200 hover:bg-gray-50 transition-all duration-300 hover:-translate-y-0.5 rounded-xl font-semibold cursor-pointer"
+              onClick={(e) => {
+                console.log('Клик по кнопке Кейсы');
+                // Не предотвращаем действие по умолчанию - пусть ссылка работает
+              }}
             >
-              <a href="#keisy">Посмотреть кейсы</a>
-            </Button>
+              Посмотреть кейсы
+            </a>
           </div>
         </div>
         
         {/* Логотипы компаний в нижней части Hero */}
-        <div className="absolute bottom-0 left-0 right-0 z-10">
+        <div className="absolute bottom-0 left-0 right-0 z-10 pointer-events-none">
           {/* Градиентный переход */}
           <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-gray-50/80 to-transparent pointer-events-none"></div>
           <LogosMarquee />
