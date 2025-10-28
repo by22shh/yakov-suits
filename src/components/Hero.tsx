@@ -111,7 +111,7 @@ export function Hero() {
         </div>
         
         {/* Логотипы компаний в нижней части Hero */}
-        <div className="absolute bottom-0 left-0 right-0 z-20">
+        <div className="absolute bottom-0 left-0 right-0 z-10">
           {/* Градиентный переход */}
           <div className="absolute top-0 left-0 right-0 h-12 bg-gradient-to-b from-gray-50/80 to-transparent pointer-events-none"></div>
           <LogosMarquee />

@@ -104,6 +104,14 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Отступ для якорных ссылок с учетом фиксированного хедера */
+#uslugi,
+#keisy,
+#komanda,
+#cta {
+  scroll-margin-top: 5rem; /* 80px для компенсации фиксированного хедера */
+}
+
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
