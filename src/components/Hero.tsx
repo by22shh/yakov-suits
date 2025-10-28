@@ -27,8 +27,8 @@ export function Hero() {
         {/* Fallback для браузеров не поддерживающих webm */}
       </video>
 
-      {/* Затемнение поверх видео для лучшей читаемости */}
-      <div className="absolute inset-0 bg-black/40 z-10"></div>
+      {/* Белый overlay поверх видео для лучшей читаемости */}
+      <div className="absolute inset-0 bg-white/60 z-10"></div>
 
       {/* Fallback фон если видео не загрузилось */}
       {videoError && (
@@ -49,7 +49,7 @@ export function Hero() {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >
-            <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent drop-shadow-lg">
+            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
               Перестаньте покупать AI.<br />
               Начните на нем зарабатывать
             </span>
@@ -57,7 +57,7 @@ export function Hero() {
 
           {/* Subheading */}
           <p
-            className={`text-lg sm:text-xl md:text-2xl text-gray-200 leading-relaxed max-w-4xl mx-auto transition-all duration-1000 delay-200 drop-shadow-md ${
+            className={`text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed max-w-4xl mx-auto transition-all duration-1000 delay-200 ${
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
             }`}
           >
@@ -136,8 +136,8 @@ export function Hero() {
         
         {/* Логотипы компаний в нижней части Hero */}
         <div className="absolute bottom-0 left-0 right-0 z-30 pointer-events-none">
-          {/* Градиентный переход - теперь от темного к прозрачному для лучшего сочетания с видео */}
-          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-black/20 to-transparent pointer-events-none"></div>
+          {/* Градиентный переход - от белого к прозрачному для плавного перехода */}
+          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white/80 to-transparent pointer-events-none"></div>
           <LogosMarquee />
         </div>
       </div>
