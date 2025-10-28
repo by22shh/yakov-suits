@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Основные цвета проекта */
+    --background: 0 0% 98%;
+    --foreground: 0 0% 16%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 16%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 16%;
+    /* Основной синий: #5066ca (адаптирован из #4f64c6) */
+    --primary: 233 58% 56%;
+    --primary-foreground: 0 0% 100%;
+    /* Светло-серый фон */
+    --secondary: 210 15% 96%;
+    --secondary-foreground: 0 0% 16%;
+    --muted: 210 15% 96%;
+    --muted-foreground: 220 13% 46%;
+    /* Фиолетовый акцент: #8a6dcf (адаптирован из #8669c9) */
+    --accent: 257 48% 63%;
+    --accent-foreground: 0 0% 100%;
+    /* Голубой акцент: #65c4e8 (адаптирован из #61c1e6) */
+    --accent-blue: 196 73% 66%;
+    /* Желтый акцент: #dab541 (адаптирован из #d8b53f) */
+    --accent-yellow: 45 67% 56%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 233 58% 56%;
+    --radius: 0.75rem;
+    /* Дополнительные акценты для графиков */
+    --chart-1: 233 58% 56%;
+    --chart-2: 196 73% 66%;
+    --chart-3: 257 48% 63%;
+    --chart-4: 45 67% 56%;
+    --chart-5: 85 46% 73%;
+  }
+
+  .dark {
+    --background: 220 24% 12%;
+    --foreground: 0 0% 98%;
+    --card: 220 20% 16%;
+    --card-foreground: 0 0% 98%;
+    --popover: 220 20% 16%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Синий для темной темы */
+    --primary: 232 56% 60%;
+    --primary-foreground: 220 24% 12%;
+
+    --secondary: 220 15% 22%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 220 15% 22%;
+    --muted-foreground: 220 10% 65%;
+
+    /* Фиолетовый для темной темы */
+    --accent: 258 46% 65%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 63% 32%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 15% 24%;
+    --input: 220 15% 24%;
+    --ring: 220 10% 65%;
+
+    --chart-1: 232 56% 60%;
+    --chart-2: 195 70% 68%;
+    --chart-3: 258 46% 65%;
+    --chart-4: 44 68% 58%;
+    --chart-5: 85 45% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent;
+  }
+
+  .section-padding {
+    @apply py-24 px-6 lg:px-8;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-feature-settings: "liga" 1, "calt" 1, "kern" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+/* Stagger delays for animations */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+
+/* Marquee animation for logos */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 12.5s linear infinite;
+  will-change: transform;
+}
