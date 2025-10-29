@@ -296,11 +296,11 @@ export function Cases() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+        <div className="flex md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 overflow-x-auto md:overflow-x-visible pb-4 md:pb-0 -mx-4 sm:-mx-6 md:mx-0 px-4 sm:px-6 md:px-0 scroll-smooth scrollbar-hide">
           {filteredCases.map((caseItem, idx) => (
             <Card
               key={caseItem.id}
-              className={`p-4 sm:p-6 hover:shadow-2xl hover:scale-[1.02] transition-all duration-500 cursor-pointer group bg-gradient-to-br from-background to-background/50 animate-fade-in-up delay-${idx * 100}`}
+              className={`min-w-[85vw] sm:min-w-[320px] md:min-w-0 p-4 sm:p-6 hover:shadow-2xl hover:scale-[1.02] transition-all duration-500 cursor-pointer group bg-gradient-to-br from-background to-background/50 animate-fade-in-up delay-${idx * 100} flex-shrink-0 md:flex-shrink`}
               onClick={() => setSelectedCase(caseItem)}
             >
               <Badge variant="secondary" className="mb-3 sm:mb-4 group-hover:bg-primary/10 transition-colors text-xs">

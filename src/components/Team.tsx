@@ -48,9 +48,9 @@ export function Team() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto">
+        <div className="flex sm:grid sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto overflow-x-auto sm:overflow-x-visible pb-4 sm:pb-0 -mx-4 sm:-mx-6 md:mx-0 px-4 sm:px-6 md:px-0 scroll-smooth scrollbar-hide">
           {team.map((member, idx) => (
-            <Card key={idx} className={`group overflow-hidden hover:shadow-2xl hover:scale-[1.03] transition-all duration-500 animate-scale-in delay-${idx * 100} flex flex-col`}>
+            <Card key={idx} className={`min-w-[75vw] sm:min-w-0 group overflow-hidden hover:shadow-2xl hover:scale-[1.03] transition-all duration-500 animate-scale-in delay-${idx * 100} flex flex-col flex-shrink-0 sm:flex-shrink`}>
               <div className="aspect-[3/4] relative overflow-hidden bg-secondary/30">
                 <Image
                   src={member.image}
