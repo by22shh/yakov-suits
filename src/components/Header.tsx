@@ -27,14 +27,14 @@ export function Header() {
         }`}
       >
         <div className="container-custom">
-          <div className="flex items-center justify-between h-16 sm:h-20 px-4 sm:px-0">
+          <div className="flex items-center justify-between h-16 sm:h-20 px-6 sm:px-8">
             <a href="#" className="flex items-center">
               <span className="text-xl sm:text-2xl font-bold tracking-tight bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">
                 Yakov Suits
               </span>
             </a>
 
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden md:flex items-center gap-8 min-w-0">
               <a
                 href="#uslugi"
                 className="text-sm font-medium text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-105 relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full"
@@ -55,11 +55,11 @@ export function Header() {
               </a>
             </nav>
 
-            <div className="flex items-center gap-3 sm:gap-4">
+            <div className="flex items-center gap-3 sm:gap-4 flex-shrink-0">
               <Button
                 asChild
                 size="sm"
-                className="hidden sm:inline-flex shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                className="hidden sm:inline-flex shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 whitespace-nowrap"
               >
                 <a href="#cta">Обсудить проект</a>
               </Button>

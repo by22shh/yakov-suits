@@ -62,7 +62,7 @@ export function CTA() {
                 data-planerka-embed="default"
                 data-planerka-url="https://planerka.app/meet"
                 data-planerka-user="nikita-yakovlev-uziqcb"
-                data-planerka-event="meeting"
+                data-planerka-event="30min"
               ></div>
             </div>
           </Card>
@@ -106,13 +106,13 @@ export function CTA() {
                   </a>
                 </Button>
                 <Button variant="outline" className="w-full justify-start" asChild>
-                  <a href="mailto:info@yakovsuits.com">
+                  <a href="mailto:n.yakovlev@yakov-suits.pro">
                     <span className="mr-2">✉️</span> Email
                   </a>
                 </Button>
               </div>
               <p className="text-xs text-muted-foreground mt-4 text-center">
-                Среднее время ответа: в течение 17 минут
+                Среднее время ответа: 15 минут
               </p>
             </div>
           </Card>
@@ -178,7 +178,7 @@ export function CTA() {
 
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <p>© 2025 Yakov Suits. Все права защищены.</p>
+            <p>© 2025 ИП Яковлев Никита Вадимович. Все права защищены.</p>
             <div className="flex gap-6">
               <a href="/privacy" className="hover:text-foreground transition-colors">
                 Политика обработки персональных данных
