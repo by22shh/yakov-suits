@@ -29,7 +29,7 @@ export function Header() {
         <div className="container-custom">
           <div className="flex items-center justify-between h-16 sm:h-20 px-6 sm:px-8">
             <a href="#" className="flex items-center">
-              <span className="text-xl sm:text-2xl font-bold tracking-tight bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">
+              <span className="text-xl sm:text-2xl font-bold tracking-tight text-[#8a6dcf]"
                 Yakov Suits
               </span>
             </a>
