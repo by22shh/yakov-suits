@@ -253,11 +253,3 @@ body {
   display: none;  /* Chrome, Safari and Opera */
 }
 
-.scrollbar-show {
-  -ms-overflow-style: auto;
-  scrollbar-width: auto;
-}
-
-.scrollbar-show::-webkit-scrollbar {
-  display: block;
-}
