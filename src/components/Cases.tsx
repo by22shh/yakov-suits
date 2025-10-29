@@ -274,43 +274,45 @@ export function Cases() {
   return (
     <section id="keisy" className="section-padding bg-background">
       <div className="container-custom">
-        <div className="text-center mb-12 animate-fade-in-up">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">Наши кейсы</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+        <div className="text-center mb-10 sm:mb-12 animate-fade-in-up">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4 tracking-tight px-2">Наши кейсы</h2>
+          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4">
             Реальные проекты, которые мы реализовали для наших клиентов в
             различных отраслях.
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-12 px-4">
           {categories.map((cat) => (
             <Button
               key={cat}
               variant={filter === cat ? "default" : "outline"}
               onClick={() => setFilter(cat)}
+              size="sm"
+              className="text-xs sm:text-sm"
             >
               {cat}
             </Button>
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {filteredCases.map((caseItem, idx) => (
             <Card
               key={caseItem.id}
-              className={`p-6 hover:shadow-2xl hover:scale-[1.02] transition-all duration-500 cursor-pointer group bg-gradient-to-br from-background to-background/50 animate-fade-in-up delay-${idx * 100}`}
+              className={`p-4 sm:p-6 hover:shadow-2xl hover:scale-[1.02] transition-all duration-500 cursor-pointer group bg-gradient-to-br from-background to-background/50 animate-fade-in-up delay-${idx * 100}`}
               onClick={() => setSelectedCase(caseItem)}
             >
-              <Badge variant="secondary" className="mb-4 group-hover:bg-primary/10 transition-colors">
+              <Badge variant="secondary" className="mb-3 sm:mb-4 group-hover:bg-primary/10 transition-colors text-xs">
                 {caseItem.category}
               </Badge>
-              <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors leading-snug">
+              <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 group-hover:text-primary transition-colors leading-snug">
                 {caseItem.title}
               </h3>
-              <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+              <p className="text-muted-foreground text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed">
                 {caseItem.description}
               </p>
-              <div className="flex items-center text-sm font-medium text-primary">
+              <div className="flex items-center text-xs sm:text-sm font-medium text-primary">
                 Читать кейс
                 <span className="ml-2 group-hover:translate-x-2 transition-transform duration-300">
                   →
@@ -324,38 +326,38 @@ export function Cases() {
           open={!!selectedCase}
           onOpenChange={() => setSelectedCase(null)}
         >
-          <DialogContent className="max-w-3xl max-h-[90vh] overflow-hidden flex flex-col">
+          <DialogContent className="max-w-3xl max-h-[90vh] overflow-hidden flex flex-col mx-4 sm:mx-auto">
             {selectedCase && (
               <>
-                <DialogHeader className="pb-4 border-b border-border flex-shrink-0">
-                  <Badge variant="secondary" className="w-fit mb-2 px-3 py-1 bg-gradient-to-r from-primary/10 to-accent/10">
+                <DialogHeader className="pb-3 sm:pb-4 border-b border-border flex-shrink-0">
+                  <Badge variant="secondary" className="w-fit mb-2 px-2 sm:px-3 py-0.5 sm:py-1 bg-gradient-to-r from-primary/10 to-accent/10 text-xs">
                     {selectedCase.category}
                   </Badge>
-                  <DialogTitle className="text-2xl font-bold tracking-tight">
+                  <DialogTitle className="text-lg sm:text-xl md:text-2xl font-bold tracking-tight">
                     {selectedCase.title}
                   </DialogTitle>
                 </DialogHeader>
 
-                <div className="space-y-5 mt-4 overflow-y-auto flex-1 pr-2">
+                <div className="space-y-4 sm:space-y-5 mt-3 sm:mt-4 overflow-y-auto flex-1 pr-1 sm:pr-2">
                   {/* Задача */}
-                  <div className="bg-gradient-to-br from-muted/30 to-muted/10 rounded-lg p-4 border border-border">
-                    <h4 className="font-bold text-base mb-2">Задача</h4>
-                    <p className="text-sm text-foreground font-medium leading-relaxed">
+                  <div className="bg-gradient-to-br from-muted/30 to-muted/10 rounded-lg p-3 sm:p-4 border border-border">
+                    <h4 className="font-bold text-sm sm:text-base mb-2">Задача</h4>
+                    <p className="text-xs sm:text-sm text-foreground font-medium leading-relaxed">
                       {selectedCase.fullContent.task}
                     </p>
                   </div>
 
                   {/* Решение */}
-                  <div className="bg-gradient-to-br from-background to-muted/5 rounded-lg p-4 border border-border">
-                    <h4 className="font-bold text-base mb-3">
+                  <div className="bg-gradient-to-br from-background to-muted/5 rounded-lg p-3 sm:p-4 border border-border">
+                    <h4 className="font-bold text-sm sm:text-base mb-2 sm:mb-3">
                       Что сделали
                     </h4>
                     {Array.isArray(selectedCase.fullContent.solution) ? (
                       <ul className="space-y-2">
                         {selectedCase.fullContent.solution.map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-2.5 text-sm text-muted-foreground leading-relaxed">
-                            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center mt-0.5">
-                              <svg className="w-2.5 h-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <li key={idx} className="flex items-start gap-2 sm:gap-2.5 text-xs sm:text-sm text-muted-foreground leading-relaxed">
+                            <span className="flex-shrink-0 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center mt-0.5">
+                              <svg className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                               </svg>
                             </span>
@@ -364,18 +366,18 @@ export function Cases() {
                         ))}
                       </ul>
                     ) : (
-                      <p className="text-sm text-muted-foreground leading-relaxed">
+                      <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed">
                         {selectedCase.fullContent.solution}
                       </p>
                     )}
                   </div>
 
                   {/* Результат */}
-                  <div className="bg-gradient-to-br from-emerald-500/5 to-emerald-600/5 border-2 border-emerald-600/20 p-4 rounded-lg">
-                    <h4 className="font-bold text-base mb-2 bg-gradient-to-r from-emerald-600 to-emerald-700 bg-clip-text text-transparent">
+                  <div className="bg-gradient-to-br from-emerald-500/5 to-emerald-600/5 border-2 border-emerald-600/20 p-3 sm:p-4 rounded-lg">
+                    <h4 className="font-bold text-sm sm:text-base mb-2 bg-gradient-to-r from-emerald-600 to-emerald-700 bg-clip-text text-transparent">
                       Результат
                     </h4>
-                    <p className="text-sm text-foreground font-medium leading-relaxed">
+                    <p className="text-xs sm:text-sm text-foreground font-medium leading-relaxed">
                       {selectedCase.fullContent.result}
                     </p>
                   </div>

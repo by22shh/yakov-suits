@@ -108,43 +108,43 @@ export function Services() {
   return (
     <section id="uslugi" className="section-padding bg-secondary/30">
       <div className="container-custom">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-3 sm:mb-4 tracking-tight px-2">
             От консалтинга к внедрению: прозрачная система в 3 шага
           </h2>
         </div>
 
         <Tabs defaultValue="step1" className="w-full">
-          <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-3 h-auto mb-12 bg-background border border-border">
-            <TabsTrigger value="step1" className="py-6 px-4 text-sm data-[state=active]:bg-primary/10">
+          <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-3 h-auto mb-8 sm:mb-12 bg-background border border-border">
+            <TabsTrigger value="step1" className="py-3 sm:py-4 md:py-6 px-2 sm:px-4 text-xs sm:text-sm data-[state=active]:bg-primary/10">
               <div className="text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                  <span className="text-2xl font-bold text-primary">1</span>
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                  <span className="text-lg sm:text-xl md:text-2xl font-bold text-primary">1</span>
                 </div>
-                <div className="font-semibold mb-1">AI-Консалтинг и Стратегия</div>
-                <div className="text-xs text-muted-foreground">
+                <div className="font-semibold mb-1 text-[10px] sm:text-xs md:text-sm">AI-Консалтинг и Стратегия</div>
+                <div className="text-[9px] sm:text-xs text-muted-foreground hidden sm:block">
                   Находим точки роста и считаем ROI
                 </div>
               </div>
             </TabsTrigger>
-            <TabsTrigger value="step2" className="py-6 px-4 text-sm data-[state=active]:bg-primary/10">
+            <TabsTrigger value="step2" className="py-3 sm:py-4 md:py-6 px-2 sm:px-4 text-xs sm:text-sm data-[state=active]:bg-primary/10">
               <div className="text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                  <span className="text-2xl font-bold text-primary">2</span>
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                  <span className="text-lg sm:text-xl md:text-2xl font-bold text-primary">2</span>
                 </div>
-                <div className="font-semibold mb-1">Быстрые AI-Решения</div>
-                <div className="text-xs text-muted-foreground">
+                <div className="font-semibold mb-1 text-[10px] sm:text-xs md:text-sm">Быстрые AI-Решения</div>
+                <div className="text-[9px] sm:text-xs text-muted-foreground hidden sm:block">
                   Внедряем решения с быстрым ROI
                 </div>
               </div>
             </TabsTrigger>
-            <TabsTrigger value="step3" className="py-6 px-4 text-sm data-[state=active]:bg-primary/10">
+            <TabsTrigger value="step3" className="py-3 sm:py-4 md:py-6 px-2 sm:px-4 text-xs sm:text-sm data-[state=active]:bg-primary/10">
               <div className="text-center">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-3">
-                  <span className="text-2xl font-bold text-primary">3</span>
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-2 sm:mb-3">
+                  <span className="text-lg sm:text-xl md:text-2xl font-bold text-primary">3</span>
                 </div>
-                <div className="font-semibold mb-1">Enterprise и Безопасность</div>
-                <div className="text-xs text-muted-foreground">
+                <div className="font-semibold mb-1 text-[10px] sm:text-xs md:text-sm">Enterprise и Безопасность</div>
+                <div className="text-[9px] sm:text-xs text-muted-foreground hidden sm:block">
                   Масштабируем и интегрируем
                 </div>
               </div>
@@ -152,26 +152,26 @@ export function Services() {
           </TabsList>
 
           <TabsContent value="step1">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
               {services.step1.map((service, idx) => (
-                <Card key={idx} className={`group p-6 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 border-l-4 border-l-primary/30 bg-gradient-to-br from-background to-background/50 animate-fade-in-up delay-${idx * 100}`}>
-                  <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors">{service.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
+                <Card key={idx} className={`group p-4 sm:p-6 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 border-l-4 border-l-primary/30 bg-gradient-to-br from-background to-background/50 animate-fade-in-up delay-${idx * 100}`}>
+                  <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 group-hover:text-primary transition-colors">{service.title}</h3>
+                  <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">{service.description}</p>
                 </Card>
               ))}
             </div>
           </TabsContent>
 
           <TabsContent value="step2">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
               {services.step2.map((service, idx) => (
-                <Card key={idx} className={`group p-6 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 border-l-4 border-l-accent/50 bg-gradient-to-br from-background to-background/50 animate-fade-in-up delay-${idx * 100}`}>
-                  <h3 className="text-lg font-semibold mb-3 group-hover:text-accent transition-colors">{service.title}</h3>
-                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                <Card key={idx} className={`group p-4 sm:p-6 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 border-l-4 border-l-accent/50 bg-gradient-to-br from-background to-background/50 animate-fade-in-up delay-${idx * 100}`}>
+                  <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 group-hover:text-accent transition-colors">{service.title}</h3>
+                  <p className="text-muted-foreground text-xs sm:text-sm mb-3 sm:mb-4 leading-relaxed">
                     {service.description}
                   </p>
                   {service.hasLink && (
-                    <Button variant="outline" size="sm" className="hover:bg-accent/10">
+                    <Button variant="outline" size="sm" className="hover:bg-accent/10 text-xs sm:text-sm">
                       Перейти в каталог
                     </Button>
                   )}
@@ -181,11 +181,11 @@ export function Services() {
           </TabsContent>
 
           <TabsContent value="step3">
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
               {services.step3.map((service, idx) => (
-                <Card key={idx} className={`group p-6 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 border-l-4 border-l-primary/50 bg-gradient-to-br from-background to-background/50 animate-fade-in-up delay-${idx * 100}`}>
-                  <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors">{service.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
+                <Card key={idx} className={`group p-4 sm:p-6 hover:shadow-xl hover:scale-[1.02] transition-all duration-300 border-l-4 border-l-primary/50 bg-gradient-to-br from-background to-background/50 animate-fade-in-up delay-${idx * 100}`}>
+                  <h3 className="text-base sm:text-lg font-semibold mb-2 sm:mb-3 group-hover:text-primary transition-colors">{service.title}</h3>
+                  <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">{service.description}</p>
                 </Card>
               ))}
             </div>

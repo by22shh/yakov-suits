@@ -23,40 +23,40 @@ export function CTA() {
   return (
     <section id="cta" className="section-padding bg-gradient-to-b from-background to-secondary/30">
       <div className="container-custom">
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 tracking-tight">
+        <div className="text-center mb-12 sm:mb-16 animate-fade-in-up">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 sm:mb-6 tracking-tight px-2">
             Готовы обсудить ваш проект?
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed px-4">
             Выберите удобный способ связи или запишитесь на бесплатную
             консультацию.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 max-w-5xl mx-auto">
           {/* Calendar/Booking Card */}
-          <Card className="p-8">
-            <h3 className="text-2xl font-bold mb-4">
+          <Card className="p-4 sm:p-6 md:p-8">
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">
               Выберите время встречи
             </h3>
-            <div className="mb-6">
-              <div className="inline-block px-4 py-2 bg-accent/10 border border-accent/20 rounded-lg mb-4">
-                <p className="text-sm font-semibold text-accent">
+            <div className="mb-4 sm:mb-6">
+              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-accent/10 border border-accent/20 rounded-lg mb-3 sm:mb-4">
+                <p className="text-xs sm:text-sm font-semibold text-accent">
                   Бесплатная диагностика
                 </p>
               </div>
-              <h4 className="text-lg font-semibold mb-2">Встреча на час</h4>
-              <p className="text-muted-foreground mb-4">
+              <h4 className="text-base sm:text-lg font-semibold mb-2">Встреча на час</h4>
+              <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">
                 Бесплатная первичная консультация: погрузимся в ваши задачи и
                 покажем, где ИИ уже сегодня может сэкономить вам время, деньги
                 и внимание.
               </p>
-              <div className="flex gap-4 text-sm text-muted-foreground mb-6">
+              <div className="flex flex-wrap gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-6">
                 <span>⏱ 60 мин</span>
                 <span>💻 Google Meet</span>
               </div>
             </div>
-            <div className="bg-secondary/50 border border-border rounded-lg overflow-hidden min-h-[500px]">
+            <div className="bg-secondary/50 border border-border rounded-lg overflow-hidden min-h-[400px] sm:min-h-[500px]">
               <div
                 className="app-planerka-embed"
                 data-planerka-embed="default"
@@ -68,15 +68,15 @@ export function CTA() {
           </Card>
 
           {/* Contact Card */}
-          <Card className="p-8">
-            <h3 className="text-2xl font-bold mb-4">Или свяжитесь с нами</h3>
-            <div className="mb-6">
-              <div className="inline-block px-4 py-2 bg-primary/10 border border-primary/20 rounded-lg mb-4">
-                <p className="text-sm font-semibold">
+          <Card className="p-4 sm:p-6 md:p-8">
+            <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Или свяжитесь с нами</h3>
+            <div className="mb-4 sm:mb-6">
+              <div className="inline-block px-3 sm:px-4 py-1.5 sm:py-2 bg-primary/10 border border-primary/20 rounded-lg mb-3 sm:mb-4">
+                <p className="text-xs sm:text-sm font-semibold">
                   Бесплатная консультация
                 </p>
               </div>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6">
                 Запишитесь на консультацию с нашими экспертами
               </p>
             </div>
@@ -119,12 +119,12 @@ export function CTA() {
         </div>
       </div>
 
-      <footer className="container-custom mt-24 pt-16 border-t border-border">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+      <footer className="container-custom mt-16 sm:mt-24 pt-12 sm:pt-16 border-t border-border">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
           {/* Company Info */}
-          <div className="md:col-span-2">
-            <h3 className="text-xl font-bold mb-4">Yakov Suits</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+          <div className="sm:col-span-2 md:col-span-2">
+            <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Yakov Suits</h3>
+            <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mb-4 sm:mb-6">
               Премиальный AI-консалтинг и внедрение. Превращаем AI из модного слова
               в работающий инструмент, который приносит деньги.
             </p>
@@ -144,7 +144,7 @@ export function CTA() {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold mb-4">Контакты</h4>
+            <h4 className="text-sm sm:text-base font-semibold mb-3 sm:mb-4">Контакты</h4>
             <div className="space-y-3 text-sm">
               <a href="tel:+79139873058" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
                 <span>📞</span>
@@ -167,8 +167,8 @@ export function CTA() {
 
           {/* Legal Info */}
           <div>
-            <h4 className="font-semibold mb-4">Юридическая информация</h4>
-            <div className="space-y-2 text-sm text-muted-foreground">
+            <h4 className="text-sm sm:text-base font-semibold mb-3 sm:mb-4">Юридическая информация</h4>
+            <div className="space-y-2 text-xs sm:text-sm text-muted-foreground">
               <p>ИП Яковлев Никита Вадимович</p>
               <p>ИНН: 540863824601</p>
               <p>ОГРНИП: 324547600123251</p>
@@ -176,14 +176,14 @@ export function CTA() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-border">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <p>© 2025 ИП Яковлев Никита Вадимович. Все права защищены.</p>
-            <div className="flex gap-6">
-              <a href="/privacy" className="hover:text-foreground transition-colors">
+        <div className="pt-6 sm:pt-8 border-t border-border">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4 text-xs sm:text-sm text-muted-foreground">
+            <p className="text-center md:text-left">© 2025 ИП Яковлев Никита Вадимович. Все права защищены.</p>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6">
+              <a href="/privacy" className="hover:text-foreground transition-colors text-center">
                 Политика обработки персональных данных
               </a>
-              <a href="/terms" className="hover:text-foreground transition-colors">
+              <a href="/terms" className="hover:text-foreground transition-colors text-center">
                 Условия использования
               </a>
             </div>
