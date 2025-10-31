@@ -37,4 +37,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 
 ## Deploy on reg.ru
 
-This project is configured for automatic deployment to reg.ru hosting via GitHub Actions. The deployment runs automatically on every push to the `master` branch.
+This project is configured for automatic deployment to reg.ru hosting via GitHub Actions. The deployment runs automatically on every push to the `master` branch. Make sure to configure FTP credentials in GitHub environment secrets before deployment.
